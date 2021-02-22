@@ -23,13 +23,13 @@ def cli(application_name):
     try:
         os.mkdir(os.path.join(current_working_directory, application_name))
     except (FileExistsError, Exception):
-        sys.exit('🎃 Project Already Exists Please Select Another Name 🎃')
-    # Changing the dir to appliaction dir
+        sys.exit('Project Already Exists Please Select Another Name 👩‍🏭')
+    # Changing the dir to application dir
     os.chdir(os.path.join(current_working_directory, application_name))
-    click.echo("👺Creating the virtual enviornment👺")
+    click.echo("Creating the virtual environment📑")
     subprocess.run(['virtualenv', 'venv'],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    click.echo("👾Vitualenv created👾")
+    click.echo("Vitualenv created📩")
     # Making an app directory
     os.mkdir('app')
     # At this point the cwd is
@@ -40,10 +40,10 @@ def cli(application_name):
     # TODO: Step 1->Create a templates Directory
     # TODO: Step 2->Create a static Directory
     # TODO: Step 1->Then create css/js/img directory in static
-    click.echo("💩Creating Templates💩")
+    click.echo("Creating Templates🗃️")
     os.mkdir('./templates')
     create_file('./templates/index.html', 'Hello world')
-    click.echo("👨‍💻Creating Static Folders👨‍💻")
+    click.echo("Creating Static Folders📁")
     os.mkdir('./static')
     os.mkdir('./static/css')
     os.mkdir('./static/js')
@@ -51,4 +51,4 @@ def cli(application_name):
     create_file('./__init__.py', "print('hello world')")
     create_file('./routes.py', "print('This is routes file')")
     click.echo("\n")
-    click.echo("🤙 Succesfully Created Project 🤙")
+    click.echo(" SuccessFully Created Project 👍")
